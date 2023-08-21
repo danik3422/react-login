@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
+import EmailVerify from './components/EmailVerify/EmailVerify'
 import Login from './components/Login/login'
 import Main from './components/Main/main'
 import Signup from './components/Signup/signup'
@@ -11,6 +12,7 @@ function App() {
 			<Route path='/signup' element={<Signup />} />
 			<Route path='/login' element={<Login />} />
 			<Route path='/' element={<Navigate to='/login' />} />
+			<Route path='/users/:id/verify/:token' element={<EmailVerify />} />
 		</Routes>
 	)
 }
